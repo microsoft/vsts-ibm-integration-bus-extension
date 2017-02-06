@@ -1,0 +1,16 @@
+node_modules/
+_temp/
+_results/
+_build/
+
+gulp-tsc-tmp-*
+.gulp-tsc-tmp-*
+
+[Tt]asks/**/*.js
+[Tt]ests/**/*.js
+
+.vscode
+.taskkey
+
+*.vsix
+*.zip
