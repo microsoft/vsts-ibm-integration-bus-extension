@@ -1,7 +1,7 @@
 {
   "name": "vsts-ibm-integration-bus-extension",
   "version": "1.113.0",
-  "description": "A set of TFS/Team Services tasks for managing IBM Integration Bus.",
+  "description": "Build and release tasks for managing IBM Integration Bus",
   "repository": {
     "type": "git",
     "url": "https://github.com/Microsoft/vsts-ibm-integration-bus-extension"

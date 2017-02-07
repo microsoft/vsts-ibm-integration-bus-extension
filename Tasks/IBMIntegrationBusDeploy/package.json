@@ -1,7 +1,7 @@
 {
   "name": "ibm-integration-bus-deployment",
   "version": "1.113.0",
-  "description": "VSTS task to deploy BAR file to IBM Integration Bus.",
+  "description": "Deploy a BAR file to IBM Integration Bus",
   "main": "iib-deploy.js",
   "dependencies": {
     "vsts-task-lib": "^1.1.0"

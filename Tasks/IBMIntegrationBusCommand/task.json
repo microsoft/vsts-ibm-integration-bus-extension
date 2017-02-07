@@ -2,7 +2,7 @@
     "id": "25D52C82-C978-4743-BE00-A5C13CB01D96",
     "name": "IBMIntegrationBusCommand",
     "friendlyName": "IBM Integration Bus Management Command",
-    "description": "Rum IBM Integration Bus commands.",
+    "description": "Run IBM Integration Bus commands",
     "author": "Microsoft Corporation",
     "category": "Utility",
     "visibility": [

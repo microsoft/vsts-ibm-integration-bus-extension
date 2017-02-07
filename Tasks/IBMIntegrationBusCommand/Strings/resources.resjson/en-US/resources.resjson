@@ -1,6 +1,6 @@
 {
   "loc.friendlyName": "IBM Integration Bus Management Command",
-  "loc.description": "Rum IBM Integration Bus commands.",
+  "loc.description": "Run IBM Integration Bus commands",
   "loc.instanceNameFormat": "Run $(cmd) on IBM Integration Bus.",
   "loc.input.label.connType": "Connection Method",
   "loc.input.label.iibEndpoint": "Integration Bus Endpoint",

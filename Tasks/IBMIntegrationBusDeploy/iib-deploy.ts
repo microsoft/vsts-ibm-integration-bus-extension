@@ -137,7 +137,7 @@ async function run() {
         }
 
         // Check for existance of Execution Group (Integration Server in v10)
-        tl.debug('Checking for executing group...');
+        tl.debug('Checking for execution group...');
 
         let executionGroupExists: boolean = checkExecutionGroup();
         if (!executionGroupExists) {
