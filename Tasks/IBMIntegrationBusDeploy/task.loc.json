@@ -1,0 +1,196 @@
+{
+  "id": "3E8286C9-EEFF-40EB-9C19-E3A686A1DB6E",
+  "name": "IBMIntegrationBusDeploy",
+  "friendlyName": "ms-resource:loc.friendlyName",
+  "description": "ms-resource:loc.description",
+  "author": "Microsoft Corporation",
+  "category": "Deploy",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "1",
+    "Minor": "113",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.95.3",
+  "instanceNameFormat": "ms-resource:loc.instanceNameFormat",
+  "groups": [
+    {
+      "name": "integrationNodeSpec",
+      "displayName": "ms-resource:loc.group.displayName.integrationNodeSpec",
+      "isExpanded": true
+    },
+    {
+      "name": "deploy",
+      "displayName": "ms-resource:loc.group.displayName.deploy",
+      "isExpanded": true
+    },
+    {
+      "name": "advanced",
+      "displayName": "ms-resource:loc.group.displayName.advanced",
+      "isExpanded": false
+    }
+  ],
+  "inputs": [
+    {
+      "name": "barPath",
+      "type": "filePath",
+      "label": "ms-resource:loc.input.label.barPath",
+      "defaultValue": "**/*.bar",
+      "required": true,
+      "groupName": "deploy",
+      "helpMarkDown": "ms-resource:loc.input.help.barPath"
+    },
+    {
+      "name": "connType",
+      "type": "pickList",
+      "label": "ms-resource:loc.input.label.connType",
+      "defaultValue": "serviceEndpoint",
+      "groupName": "integrationNodeSpec",
+      "helpMarkDown": "",
+      "options": {
+        "serviceEndpoint": "Service Endpoint Connection",
+        "address": "Enter Connection Details",
+        "file": "Use .broker File"
+      }
+    },
+    {
+      "name": "iibEndpoint",
+      "type": "connectedService:ibmintegrationbusendpoint",
+      "label": "ms-resource:loc.input.label.iibEndpoint",
+      "groupName": "integrationNodeSpec",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.iibEndpoint",
+      "visibleRule": "connType = serviceEndpoint"
+    },
+    {
+      "name": "integrationNodeName",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.integrationNodeName",
+      "defaultValue": "",
+      "required": true,
+      "groupName": "integrationNodeSpec",
+      "helpMarkDown": "ms-resource:loc.input.help.integrationNodeName",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.username",
+      "defaultValue": "",
+      "required": false,
+      "groupName": "integrationNodeSpec",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.password",
+      "defaultValue": "",
+      "required": false,
+      "groupName": "integrationNodeSpec",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "ipAddress",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.ipAddress",
+      "defaultValue": "",
+      "required": true,
+      "groupName": "integrationNodeSpec",
+      "helpMarkDown": "ms-resource:loc.input.help.ipAddress",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "port",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.port",
+      "defaultValue": "4414",
+      "required": false,
+      "groupName": "integrationNodeSpec",
+      "helpMarkDown": "ms-resource:loc.input.help.port",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "queueManager",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.queueManager",
+      "defaultValue": "",
+      "required": false,
+      "groupName": "integrationNodeSpec",
+      "helpMarkDown": "ms-resource:loc.input.help.queueManager",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "configFile",
+      "type": "filePath",
+      "label": "ms-resource:loc.input.label.configFile",
+      "defaultValue": "",
+      "required": true,
+      "groupName": "integrationNodeSpec",
+      "helpMarkDown": "ms-resource:loc.input.help.configFile",
+      "visibleRule": "connType = file"
+    },
+    {
+      "name": "integrationServerName",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.integrationServerName",
+      "defaultValue": "",
+      "groupName": "deploy",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.integrationServerName"
+    },
+    {
+      "name": "completeDeployment",
+      "type": "boolean",
+      "label": "ms-resource:loc.input.label.completeDeployment",
+      "groupName": "deploy",
+      "defaultValue": false,
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.completeDeployment"
+    },
+    {
+      "name": "restartIntegrationServer",
+      "type": "boolean",
+      "label": "ms-resource:loc.input.label.restartIntegrationServer",
+      "defaultValue": false,
+      "required": false,
+      "groupName": "deploy",
+      "helpMarkDown": "ms-resource:loc.input.help.restartIntegrationServer"
+    },
+    {
+      "name": "timeoutSecs",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.timeoutSecs",
+      "defaultValue": "",
+      "groupName": "advanced",
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.timeoutSecs"
+    },
+    {
+      "name": "options",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.options",
+      "groupName": "advanced",
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.options"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "iib-deploy.js",
+      "argumentFormat": ""
+    }
+  },
+  "messages": {
+    "InvalidFile": "ms-resource:loc.messages.InvalidFile",
+    "NoFilesFound": "ms-resource:loc.messages.NoFilesFound",
+    "MultipleFilesFound": "ms-resource:loc.messages.MultipleFilesFound",
+    "SuccessfullyPublished": "ms-resource:loc.messages.SuccessfullyPublished"
+  },
+  "helpMarkDown": "ms-resource:loc.helpMarkDown"
+}

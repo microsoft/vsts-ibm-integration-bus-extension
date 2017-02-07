@@ -1,0 +1,130 @@
+{
+  "id": "25D52C82-C978-4743-BE00-A5C13CB01D96",
+  "name": "IBMIntegrationBusCommand",
+  "friendlyName": "ms-resource:loc.friendlyName",
+  "description": "ms-resource:loc.description",
+  "author": "Microsoft Corporation",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "1",
+    "Minor": "113",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.95.3",
+  "instanceNameFormat": "ms-resource:loc.instanceNameFormat",
+  "inputs": [
+    {
+      "name": "connType",
+      "type": "pickList",
+      "label": "ms-resource:loc.input.label.connType",
+      "defaultValue": "serviceEndpoint",
+      "helpMarkDown": "",
+      "options": {
+        "serviceEndpoint": "Service Endpoint Connection",
+        "address": "Enter Connection Details",
+        "file": "Use .broker File"
+      }
+    },
+    {
+      "name": "iibEndpoint",
+      "type": "connectedService:ibmintegrationbusendpoint",
+      "label": "ms-resource:loc.input.label.iibEndpoint",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.iibEndpoint",
+      "visibleRule": "connType = serviceEndpoint"
+    },
+    {
+      "name": "integrationNodeName",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.integrationNodeName",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.integrationNodeName",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.username",
+      "defaultValue": "",
+      "required": false,
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.password",
+      "defaultValue": "",
+      "required": false,
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "ipAddress",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.ipAddress",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.ipAddress",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "port",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.port",
+      "defaultValue": "4414",
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.port",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "queueManager",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.queueManager",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.queueManager",
+      "visibleRule": "connType = address"
+    },
+    {
+      "name": "configFile",
+      "type": "filePath",
+      "label": "ms-resource:loc.input.label.configFile",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.configFile",
+      "visibleRule": "connType = file"
+    },
+    {
+      "name": "cmd",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.cmd",
+      "defaultValue": "",
+      "required": true
+    },
+    {
+      "name": "args",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.args",
+      "defaultValue": "",
+      "required": true
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "iib-command.js",
+      "argumentFormat": ""
+    }
+  },
+  "messages": {
+    "NoFilesFound": "ms-resource:loc.messages.NoFilesFound",
+    "MultipleFilesFound": "ms-resource:loc.messages.MultipleFilesFound",
+    "CommandSuccessful": "ms-resource:loc.messages.CommandSuccessful"
+  },
+  "helpMarkDown": "ms-resource:loc.helpMarkDown"
+}

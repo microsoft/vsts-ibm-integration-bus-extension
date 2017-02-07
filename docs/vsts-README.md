@@ -12,17 +12,17 @@ This extension installs the following components:
 * In order to automate the deployment of BAR files to IBM Integration Bus, the build agent must have access to the 'mqsi*' commands.  Please follow IBM Integration Bus document to setup the command environment.  
   * If the build agent is running on Windows, the "Batch Scrit" task can be used to run the 'mqsiprofile.cmd' script and setup the command environment.  Make sure 'Modify Environment' is checked.
  
-    ![batch script task](images/setup_cmd_env_on_windows.PNG)
+    ![batch script task](../images/setup_cmd_env_on_windows.PNG)
 
 ## IBM Integration Bus Deployment Task
 
 1. Open your build definition and add the "IBM Integration Bus Deployment" task.  The task can be found in the 'Deploy' section.
 
-    ![IBM Integration Bus Deployment Task](images/iib-task.PNG)
+    ![IBM Integration Bus Deployment Task](../images/iib-task.PNG)
 
 1. Details of the deployment task.
 
-    ![IBM Integration Bus Deployment Task Details](images/iib-deploy-task-details.PNG)
+    ![IBM Integration Bus Deployment Task Details](../images/iib-deploy-task-details.PNG)
 
     * Setup [Connection Options](#setup-connection-options). 
     * Enter the path to a BAR file.  Wildcard can be used, but the pattern must resolve to exactly one file.  
@@ -34,11 +34,11 @@ This extension installs the following components:
 
 1. Open your build definition and add the "IBM Integration Bus Command" task.  The task can be found in the 'Utility' section.
 
-    ![IBM Integration Bus Command Task](images/iib-command-task.PNG)
+    ![IBM Integration Bus Command Task](../images/iib-command-task.PNG)
 
 1. Details of the command task.
 
-     ![IBM Integration Bus Command Task Details](images/iib-command-task-details.PNG)
+     ![IBM Integration Bus Command Task Details](../images/iib-command-task-details.PNG)
 
     * Setup [Connection Options](#setup-connection-options). 
     * Enter the command and any arguments
@@ -50,7 +50,7 @@ The tasks provide three options to connect to IBM Integration Bus:
 1. Connecting with an "IBM Integration Service Bus" endpoint. 
     * This option is supported on Visual Studio Team Services and Team Foundation Server 2017.  On Team Foundation Server 2015, please use other options to connect.
 
-    ![IBM Integration Bus Endpoint](images/iib_endpoint.PNG)
+    ![IBM Integration Bus Endpoint](../images/iib_endpoint.PNG)
 
     * __Connection name__: name used to identify this connection.
     * __Integration Node__: name of the Integration Node.  This is called "Broker" in prior versions of Integration Bus.
