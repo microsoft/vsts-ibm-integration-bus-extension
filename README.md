@@ -1,4 +1,4 @@
-# Visual Studio Team Services Extension for IBM Integration Bus
+# [Visual Studio Team Services Extension for IBM Integration Bus](https://marketplace.visualstudio.com/items?itemName=ms-vsts.ibm-integration-bus)
 
 This extension provides build tasks to manage and deploy Broker Archive (BAR) files to IBM Integration Bus v10.
 
