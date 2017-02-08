@@ -3,8 +3,8 @@
     "id": "ibm-integration-bus",
     "name": "IBM Integration Bus",
     "version": "1.113.0",
-    "publisher": "ms-vsclient",
-    "description": "",
+    "publisher": "ms-vsts",
+    "description": "Manage and Deploy to IBM Integration Bus",
     "public": true,
     "categories": [
         "Build and release"
