@@ -1,0 +1,30 @@
+{
+  "name": "ibm-integration-bus-deployment",
+  "version": "1.113.0",
+  "description": "Deploy a BAR file to IBM Integration Bus",
+  "main": "iib-deploy.js",
+  "dependencies": {
+    "vsts-task-lib": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microsoft/vsts-ibm-integration-bus-extension.git"
+  },
+  "keywords": [
+    "VSTS",
+    "IBM",
+    "Integration Bus",
+    "Release",
+    "Build"
+  ],
+  "bugs": {
+    "url": "https://github.com/Microsoft/vsts-ibm-integration-bus-extension/issues"
+  },
+  "homepage": "https://github.com/Microsoft/vsts-ibm-integration-bus-extension#readme"
+}
